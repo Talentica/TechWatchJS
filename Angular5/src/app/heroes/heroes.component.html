@@ -1,0 +1,14 @@
+<h2>Heroes List</h2>
+<div class="form-group">
+  <select style="display: inline-block;width: 200px;" class="form-control" (change)="handleQuantityChange($event)">
+    <option *ngFor="let option of optionList">{{option}}</option>
+  </select>
+  <input type="search" ref="searchField" (keyup)="search($event)" style="display: inline-block;width: 200px;" class="form-control" placeholder="Search Heroes"/>
+</div>
+
+<div *ngFor="let hero of heroes" class="col-md-4">
+  <div class="thumbnail">
+    <hero-card [details]="hero"></hero-card>
+  </div>
+</div>
+<hr>
