@@ -26,7 +26,7 @@ import {SearchModel, PerformSearchService} from './perform-search.service'
     `,
 })
 @RouteConfig([
-  {path:'/grid-search/', as: 'GridSearchView', component: GridSearchView}
+  {path:'/grid-search/', as: 'GridSearchView', component: GridSearchView},
   {path:'/list-search/', as: 'ListSearchView', component: ListSearchView}
 ])
 export class AppDataComponent {

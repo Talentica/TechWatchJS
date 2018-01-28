@@ -12,11 +12,11 @@ import {PerformSearchService} from './perform-search.service'
 })
 export class FormSelectComponent {
 	constructor(
-		public performSearch:PerformSearchService;
+		public performSearch:PerformSearchService
 	){}
 	 optionList = [200,10, 50 , 100, 200, 500, 1000, 2500];
 	 handleQuantityChange(event){
-	 	currentValue = event.target.value;
+	 	let currentValue = event.target.value;
 	 	this.performSearch.changeDataQuantity(currentValue);
 	 }
 }

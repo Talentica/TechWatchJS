@@ -1,8 +1,8 @@
 export class SearchModel{
 		dataQuantity:number = 200;
-		searchData:Array;
-        searchDataComplete:Array = searchDummyData;
-        searchDataUpdated:Array =searchDummyData.slice(0, 199);
+		searchData:Array<any>;
+        searchDataComplete:Array<any> = searchDummyData;
+        searchDataUpdated:Array<any> =searchDummyData.slice(0, 199);
         gridView:boolean = true;
         listView:boolean = false;
         imageVisibility:boolean = false;
@@ -18,12 +18,13 @@ export class SearchModel{
 		}
 }
 export class PerformSearchService{
+	searchQuery: string = '';
 	constructor(){
-		searchQuery:string = '';
+		this.searchQuery = '';
 	}
 	SearchModelObject = new SearchModel();
 	filterData(query){
-		newSearchData = [];
+		let newSearchData = [];
 		this.SearchModelObject.searchDataComplete.map(obj => {
 			if(obj.email.indexOf(query) > -1){
 				newSearchData.push(obj);

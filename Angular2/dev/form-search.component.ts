@@ -11,10 +11,10 @@ import {SearchModel, PerformSearchService} from './perform-search.service'
 })
 export class FormSearchComponent {
 	constructor(
-		public performSearch:PerformSearchService;
+		public performSearch:PerformSearchService
 	){}
 	handleChange(event){
 		console.log(event.target.value);
-		this.performSearch.filterData(event.target.value));
+		this.performSearch.filterData(event.target.value);
 	}
 }
