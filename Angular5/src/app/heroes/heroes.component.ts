@@ -26,6 +26,7 @@ export class HeroesComponent implements OnInit {
   handleQuantityChange(event) {
     this.limit = event.target.value;
     this.heroes = this.heroService.getLimitedHeros(this.limit);
+    console.log(this.heroes.length);
   }
 
   search(event) {

@@ -22,7 +22,7 @@ export class HeroService {
     private messageService: MessageService) { }
 
   getLimitedHeros(limit) {
-    return heroes.splice(0, limit);
+    return heroes.slice(0, limit);
   }
 
   /** GET heroes from the server */
