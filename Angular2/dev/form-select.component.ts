@@ -14,7 +14,7 @@ export class FormSelectComponent {
 	constructor(
 		public performSearch:PerformSearchService
 	){}
-	 optionList = [200,10, 50 , 100, 200, 500, 1000, 2500];
+	 optionList = [10, 50 , 100, 200, 500, 1000, 2500];
 	 handleQuantityChange(event){
 	 	let currentValue = event.target.value;
 	 	this.performSearch.changeDataQuantity(currentValue);

@@ -2,7 +2,7 @@ export class SearchModel{
 		dataQuantity:number = 200;
 		searchData:Array<any>;
         searchDataComplete:Array<any> = searchDummyData;
-        searchDataUpdated:Array<any> =searchDummyData.slice(0, 199);
+        searchDataUpdated:Array<any> =searchDummyData.slice(0, 10);
         gridView:boolean = true;
         listView:boolean = false;
         imageVisibility:boolean = false;
