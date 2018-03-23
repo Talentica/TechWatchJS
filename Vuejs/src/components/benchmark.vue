@@ -38,7 +38,7 @@
         <div style="margin:5px">
           <b-card-group columns >
             <template v-if="image">
-                <b-card v-for="item in filterData" :img-src="item.imgSrc + '?random' + Math.random()"     
+                <b-card v-for="item in filterData" :img-src="image ? item.imgSrc + '?random' + Math.random() : '' "
                     img-alt="Image"
                     img-top
                     :title="item.email"
@@ -51,19 +51,6 @@
                         <span class="when-opened">Less</span>
                         <span class="when-closed">More</span>
                     </b-btn>
-                </b-card>
-            </template>
-            <template v-else>
-                <b-card v-for="item in filterData" :title="item.email" :key="item.id">
-                                
-                     <b-collapse :id="item.id">
-                        <p class="card-text"> {{ item.details }} </p>
-                     </b-collapse>
-                     <b-btn  v-b-toggle="item.id" class="m-1" variant="primary">
-                        <span class="when-opened">Less</span>
-                        <span class="when-closed">More</span>
-                    </b-btn>
-                
                 </b-card>
             </template>
           </b-card-group>
